@@ -11,7 +11,9 @@
 
 Now that you understand how to use public Executor from Hub, let's practice our learning with three hello-world demos in Jina.
 
-## Modify `jina hello fashion` to use Hub executor
+## Hub 실행기를 사용하도록 '지나 헬로 패션' 수정하세요
+
+
 
 1) Clone the repository with  `jina hello fork fashion <your_project_folder>`. In `your_project_folder` you will
    have a file `app.py`  that you can change to leverage other embedding methods.
