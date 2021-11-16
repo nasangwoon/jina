@@ -29,7 +29,7 @@
       .add(uses=MyEvaluator)
       )
    ```
-   ````{admonition} Note
+   ````{admonition} Note 
    :class: note
    The line `uses='jinahub+docker://ImageTorchEncoder` allows downloading
    `ImageTorchEncoder` from Jina Hub and use it in the `Flow`.
