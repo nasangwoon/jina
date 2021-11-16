@@ -44,7 +44,7 @@
    class `ImageTorchEncoder`. In this case attribute `'model_name'` takes value `'alexnet'`.
    ````
    
-3)  `python <your_project_folder>/app.py` 를  .
+3)  `python <your_project_folder>/app.py` 를 실행하세요
 
 ## Hub 실행기를 사용하기위해 '지나 헬로 패션' 을 수정하세요
 
@@ -52,10 +52,10 @@
 As an example, you can
 use [TransformerTorchEncoder](https://github.com/jina-ai/executor-transformer-torch-encoder). To do so:
 
-1) Clone the repository with  `jina hello fork chatbot <your_project_folder>`. In the repository you will
-   have `app.py`  which you can change to leverage other embedding methods.
+1)   `jina hello fork chatbot <your_project_folder>`로 저장소를 복제하세요. 리포지토리에서 다음 작업을 수행합니다.
+        다른 임베딩 방식을 활용하기 위해 변경할 수 있는 'app.py'이 있습니다..
 
-2) Change lines 21 to 25 from `app.py` to define a different `Flow`. Change it to:
+2) 21줄을 app.py에서 25줄로 바꿔 다른 흐름을 정의한다.. 이것을 바꿔주세요:
     ```python
     Flow(cors=True)
     .add(uses=MyTransformer, replicas=args.replicas)
