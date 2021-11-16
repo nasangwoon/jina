@@ -9,15 +9,14 @@
 ```
 
 
-Now that you understand how to use public Executor from Hub, let's practice our learning with three hello-world demos in Jina.
+이제 허브에서 퍼블릭 Executor를 사용하는 방법을 이해하셨으니 지나에서 세 가지 헬로월드 데모를 통해 학습 연습을 해보도록 하겠습니다..
 
-## Modify `jina hello fashion` to use Hub executor
+## 허브 실행기를 사용하기 위해 `jina hello fashion` 수정하세요 
 
-1) Clone the repository with  `jina hello fork fashion <your_project_folder>`. In `your_project_folder` you will
-   have a file `app.py`  that you can change to leverage other embedding methods.
+1)  `jina hello fork fashion <your_project_folder>`로 저장소를 복제하세요.  `your_project_folder`에서 당신은 다른 메서드를 임베딩 할수있는 파일 `app.py` 가질 것입니다.
 
-2) Change lines 74 to 79 from `app.py` to define a different `Flow`. For example, you can
-   use  [ImageTorchEncoder](https://github.com/jina-ai/executor-image-torch-encoder):
+2)  다른 'Flow`정의하기 위해서 `app.py`에서 74줄을 79줄로 바꾸세요. 예를들어, 당신은
+    [ImageTorchEncoder](https://github.com/jina-ai/executor-image-torch-encoder):를 사용할수 있습니다
 
    ```python
    f = (
@@ -42,18 +41,17 @@ Now that you understand how to use public Executor from Hub, let's practice our 
    class `ImageTorchEncoder`. In this case attribute `'model_name'` takes value `'alexnet'`.
    ````
    
-3) Run `python <your_project_folder>/app.py` to execute.
+3) 실행하기위해  `python <your_project_folder>/app.py`를 돌려주세요.
 
-## Modify `jina hello chatbot` to use Hub Executor
+## 허브 실행기를 사용하기 위해 `jina hello chatbot` 수정하세요 
+ 
 
+예를들어, 당신은
+ [TransformerTorchEncoder](https://github.com/jina-ai/executor-transformer-torch-encoder) 사용할 수 있습니다. To do so:
 
-As an example, you can
-use [TransformerTorchEncoder](https://github.com/jina-ai/executor-transformer-torch-encoder). To do so:
+1) `jina hello fork chatbot <your_project_folder>`로 저장소를 복제하세요.  `your_project_folder`에서 당신은 다른 메서드를 임베딩 할수있는 파일 `app.py` 가질 것입니다.
 
-1) Clone the repository with  `jina hello fork chatbot <your_project_folder>`. In the repository you will
-   have `app.py`  which you can change to leverage other embedding methods.
-
-2) Change lines 21 to 25 from `app.py` to define a different `Flow`. Change it to:
+2) 다른 'Flow`정의하기 위해서 `app.py`에서 21줄을 25줄로 바꾸세요. Change it to:
     ```python
     Flow(cors=True)
     .add(uses=MyTransformer, replicas=args.replicas)
@@ -83,12 +81,12 @@ use [TransformerTorchEncoder](https://github.com/jina-ai/executor-transformer-to
     
 
 
-## Modify `jina hello mutlimodal` to use Hub Executor
+##  허브 실행기를 사용하기 위해 `jina hello mutlimodal` 수정하세요 
 
-1) Clone the repository with  `jina hello fork multimodal <your_project_folder>`. In the repository you will
-   have `flow-index.yml` and `flow-search.yml`  which you can change to leverage other embedding methods.
+1)  `jina hello fork multimodal <your_project_folder>`로 저장소를 복제하세요. 저장소에서 당신은 
+     당신은 다른 메서드를 임베딩 할수있는 파일 `flow-index.yml` and `flow-search.yml`를 가질 것 입니다.
     
-2) Change index flow and search flow accordingly
+2) index flow 와 search flow를 바꿔주세요.
    ````{tab} flow-index.yml
    ```yaml
    jtype: Flow
@@ -216,4 +214,4 @@ use [TransformerTorchEncoder](https://github.com/jina-ai/executor-transformer-to
        needs: weightedRanker
    ```
    ````
-3) Run `python <your_project_folder>/app.py` to execute.
+3) 실행하기위해 `python <your_project_folder>/app.py`.
