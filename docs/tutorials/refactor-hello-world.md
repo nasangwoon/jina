@@ -77,7 +77,7 @@
    attribute `'pretrained_model_name_or_path'` takes value `'sentence-transformers/paraphrase-mpnet-base-v2'`.
    ````
 
-3) Run `python <your_project_folder>/app.py` to execute.
+3) 실행하기위해 `python <your_project_folder>/app.py` 을 돌려주세요.
     
 
 
@@ -214,4 +214,4 @@
        needs: weightedRanker
    ```
    ````
-3) 실행하기위해 `python <your_project_folder>/app.py`.
+3) 실행하기위해 `python <your_project_folder>/app.py`을 돌려주세요 .
