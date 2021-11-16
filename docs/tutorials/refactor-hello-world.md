@@ -40,7 +40,7 @@
    The line `uses_with={'model_name': 'alexnet'}` allows a user to specify an attribute of the
    class `ImageTorchEncoder`. In this case attribute `'model_name'` takes value `'alexnet'`.
    ````
-   
+    
 3) 실행하기위해  `python <your_project_folder>/app.py`를 돌려주세요.
 
 ## 허브 실행기를 사용하기 위해 `jina hello chatbot` 수정하세요 
